@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <!-- 编码格式 -->
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- 作者 -->
+  <meta name="author" content="itWangCoder">
+  <!-- 网页描述 -->
+  <meta name="description" content="装饰家居d的公司">
+  <!-- 关键字使用","分隔 -->
+  <meta name="keywords" content="装饰,家秀,家具,家居,房子">
+  <!-- 禁止浏览器从本地机的缓存中调阅页面内容 -->
+  <meta http-equiv="Pragma" content="no-cache">
+  <!-- 用来防止别人在框架里调用你的页面 -->
+  <meta http-equiv="Window-target" content="_top">
+  <!-- content的参数有all，none，index，noindex，follow，nofollow，默认是all -->
+  <meta name="robots" content="none">
+  <!-- 收藏图标 -->
+  <link rel="Shortcut Icon" href="favicon.ico">
+  <!-- 网页不会被缓存 -->
+  <!--<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">-->
+  <!-- 解决部分兼容性问题，如果安装了GCF，则使用GCF来渲染页面，如果未安装GCF，则使用最高版本的IE内核进行渲染。 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+  <!-- 页面按原比例显示 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--这个reset.css  是初始化的样式-->
+  <link rel="stylesheet" href="assets/css/reset.css">
+   <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/bootstrap_dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+
+  <!--itwangCoder.css  是响应式公共的样式，自己封装的-->
+  <link rel="stylesheet" href="assets/css/itwangCoder.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/my-keyframes.css">
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+      background: #aaa url(assets/images/icon/icon-right.png) no-repeat center;
+      width: 38px;
+      height: 93px;
+      right: -65px;
+    }
+
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+      background: #aaa url(assets/images/icon/icon-left.png) no-repeat center;
+      width: 38px;
+      height: 93px;
+      left: -65px;
+    }
+    .swiper-button-prev:focus,.swiper-button-next:focus {
+      outline: none;
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+<div id="header"></div>
+
+
+<!--滚动屏幕显示的导航条 start-->
+<nav class="navbar navbar-expand-md navbar-dark flexBox-flex-end my-navbar  display-none" id="scrollup">
+  <div class="collapse navbar-collapse" id="navbarCollapse2">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link fontColor333 nav-link-hover-color" href="#">首页 <span class="slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">家装风格<span class="slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">服务团队<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">品质家居<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">全景展示<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">案例赏析<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">了解松霖</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0 search-input">
+      <input class="form-control mr-sm-2" type="text" placeholder="搜索需要的商品" aria-label="Search">
+      <span><img src="assets/images/icon/icon_search.png" class="img-responsive"></span>
+    </form>
+  </div>
+</nav>
+<!--滚动屏幕显示的导航条 end-->
+
+
+<!--nav start-->
+
+
+<!--banner-vr start-->
+<section class="banner-vr">
+  <div id="banner-vr-img">
+    <img src="assets/images/img/banner_img.png" class="img-responsive">
+    <div id="banner-vr-logo">
+      <img src="assets/images/img/icon_cooperation.png" class="img-responsive homeStyle-img m-auto logoImg">
+      <h1 class="fontSizeRem24 fontColorFFF flexBox-center mt-3 text-li">现代前卫风格</h1>
+      <span class="fontColorFFF fontSizeRem18 flexBox-center text-li">Modern avant-garde style</span>
+      <div class="kouhao banner-text">
+        <ul class="flexBox-center">
+          <li>凸显自我</li>
+          <li>张扬个性</li>
+        </ul>
+      </div>
+    </div>
+    <a href="#" class="my-bg-white  fontSize18"> 观看影视 > </a>
+  </div>
+
+
+  <style>
+
+
+  </style>
+</section>
+<!--banner-vr end-->
+
+<!--breadcrumb start-->
+<section class="container div-breadcrumb mt-lg-5 mt-md-5 mt-sm-4 mb-lg-5 mb-md-5 mb-sm-4 mt-3 mb-3">
+  <ol class="breadcrumb bg-white fontSizeRem18">
+    <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+    <li class="breadcrumb-item"><a href="#">家居风格</a></li>
+    <li class="breadcrumb-item active">现代前卫</li>
+  </ol>
+</section>
+<!--breadcrumb end-->
+
+
+<!-- show-style -->
+<section class="container show-style">
+  <div class="row my-row border m-0 p-0">
+    <div class="my-col col-4 m-0 p-0">
+      <h3 class="ml-2 mt-2 fontSizeRem20">现代前卫风格</h3>
+      <p class="ml-2 fontSizeRem16 english">Modern avant-garde style</p>
+      <p class="fontSize14 ml-2 fontSizeRem16">现代前卫风格注重灯光特别效果的创造。其自由度大的平面沟通
+        经常采用扭曲、变形等手法,突破惯有的横平竖直的室内空间造
+        型,将图案与曲面、直线结合，营造独特效果。
+      </p>
+    </div>
+    <div class="my-col1 col-8 m-0 p-0">
+      <img src="assets/images/img/style-img.png" class="img-responsive" width="100%" height="100%">
+    </div>
+  </div>
+</section>
+
+<style>
+
+</style>
+
+
+<!--城市案例 start-->
+<section class="decoration-case-item mt-lg-5 mt-md-5 mt-sm-4 pt-lg-5 container">
+  <!-- item-title  start-->
+  <div class="item-title flexBox-center mt-4 mb-4">
+    <span class="my-border"></span>
+    <div class="flex-column flexBox-center ml-3 mr-3">
+      <a class="fontSizeRem24">城市案例</a>
+      <a class="fontSizeRem18">Decoration Case</a>
+    </div>
+    <span class="my-border"></span>
+  </div>
+  <!-- item-title end -->
+
+  <div class="decoration-case-list">
+    <div class="row">
+      <div class="col-lg-12 normal">
+        <img src="assets/images/img/city-case.png" alt="" class="img-responsive">
+        <div class="mask ">
+          <div class="flexBox-center flex-column" style="height: 100%">
+            <h4 class="line-clamp1">中铁家园100m²</h4>
+            <p class="line-clamp2">中铁家园100m中铁家园100m中铁家园100m</p>
+            <img src="assets/images/icon/eay.png" class="img-responsive">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-lg-4 mt-md-4 mt-sm-4 mt-3 ">
+      <div class="col-6 normal1">
+        <img src="assets/images/img/caity-caes-img-sm.png" alt="" class="img-responsive">
+        <div class="mask ">
+          <div class="flexBox-center flex-column" style="height: 100%">
+            <h4>中铁家园100m²</h4>
+            <p>中铁家园100m中铁家园100m中铁家园100m</p>
+            <img src="assets/images/icon/eay.png" class="img-responsive">
+          </div>
+
+        </div>
+      </div>
+      <div class="col-6 normal2">
+        <img src="assets/images/img/caity-caes-img-sm.png" alt="" class="img-responsive">
+        <div class="mask ">
+          <div class="flexBox-center flex-column" style="height: 100%">
+            <h4>中铁家园100m²</h4>
+            <p>中铁家园100m中铁家园100m中铁家园100m</p>
+            <img src="assets/images/icon/eay.png" class="img-responsive">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-lg-4 mt-md-4 mt-sm-4 mt-2 mb-lg-4 mb-md-4 mb-sm-4 mb-2 flexBox-center">
+    <a href="" class="fontSizeRem20 more">查看更多的现代前卫案例--></a>
+  </div>
+</section>
+<!--城市案例 end-->
+
+
+<!--品质家居 start-->
+<section class="quality-decoration mt-lg-5 mt-md-5 mt-sm-4 pt-lg-5 container-fluid">
+  <!-- item-title  start-->
+  <div class="item-title flexBox-center mt-4 mb-4">
+    <span class="my-border"></span>
+    <div class="flex-column flexBox-center ml-3 mr-3">
+      <a class="fontSizeRem24">品质家居</a>
+      <a class="fontSizeRem18">Quality decoration</a>
+    </div>
+    <span class="my-border"></span>
+  </div>
+  <!-- item-title end -->
+  <section class="quality-decoration-item">
+    <div class="quality-decoration-item-list">
+      <div class="my-first-col-left">
+        <div class="my-first-col-left-top">
+          <img src="assets/images/img/pinzhi-lg-img.png" class="" alt="">
+          <div class="mask-quality-decoration">
+            <h5 class="fontColorFFF fontSizeRem20">客厅</h5>
+            <p class="fontSize12 fontColorFFF">Living Room</p>
+          </div>
+        </div>
+        <div class="my-first-col-left-down">
+          <ul>
+            <li class="mask-hover">
+              <img src="assets/images/img/pinzhi-sm.png" class="" alt="">
+              <div class="mask-my-first-col-left-down">
+                <h5 class="fontColorFFF fontSizeRem20">主卧</h5>
+                <p class="fontSize12 fontColorFFF">Room</p>
+              </div>
+            </li>
+            <li class="mask-hover">
+              <img src="assets/images/img/pinzhi-sm.png" class="" alt="">
+              <div class="mask-my-first-col-left-down">
+                <h5 class="fontColorFFF fontSizeRem20">主卧</h5>
+                <p class="fontSize12 fontColorFFF">Room</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="my-first-col-right">
+        <div class="my-first-col-right-top">
+          <ul>
+            <li class="mask-hover">
+              <img src="assets/images/img/pinzhi-sm.png" class="" alt="">
+              <div class="mask-my-first-col-right-top">
+                <h5 class="fontColorFFF fontSizeRem20">主卧</h5>
+                <p class="fontSize12 fontColorFFF">Room</p>
+              </div>
+            </li>
+            <li class="mask-hover">
+              <img src="assets/images/img/pinzhi-sm.png" class="" alt="">
+              <div class="mask-my-first-col-right-top">
+                <h5 class="fontColorFFF fontSizeRem20">主卧</h5>
+                <p class="fontSize12 fontColorFFF">Room</p>
+              </div>
+            </li>
+            <li class="mask-hover">
+              <img src="assets/images/img/pinzhi-sm.png" class="" alt="">
+              <div class="mask-my-first-col-right-top">
+                <h5 class="fontColorFFF fontSizeRem20">主卧</h5>
+                <p class="fontSize12 fontColorFFF">Room</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="my-first-col-right-down">
+          <ul>
+            <li class="mask-hover">
+              <img src="assets/images/img/pinzhi-sm.png" class="" alt="">
+              <div class="mask-my-first-col-left-down">
+                <h5 class="fontColorFFF fontSizeRem20">主卧</h5>
+                <p class="fontSize12 fontColorFFF">Room</p>
+              </div>
+            </li>
+            <li class="mask-hover">
+              <img src="assets/images/img/pinzhi-sm.png" class="" alt="">
+              <div class="mask-my-first-col-left-down">
+                <h5 class="fontColorFFF fontSizeRem20">主卧</h5>
+                <p class="fontSize12 fontColorFFF">Room</p>
+              </div>
+            </li>
+            <li class="mask-hover">
+              <img src="assets/images/img/pinzhi-sm.png" class="" alt="">
+              <div class="mask-my-first-col-left-down">
+                <h5 class="fontColorFFF fontSizeRem20">主卧</h5>
+                <p class="fontSize12 fontColorFFF">Room</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+</section>
+<!--品质家居 end-->
+
+<!-- item-title  start-->
+<div class="item-title flexBox-center mt-4 mb-4">
+  <span class="my-border"></span>
+  <div class="flex-column flexBox-center ml-3 mr-3">
+    <a class="fontSizeRem24">首席设计师</a>
+    <a class="fontSizeRem18">Chief design</a>
+  </div>
+  <span class="my-border"></span>
+</div>
+<!-- Swiper -->
+<!--首席设计师 start-->
+<section class="chief-design mt-lg-5 pt-lg-5 mt-md-5 mb-lg-5 mb-md-5 mt-3 mb-3  container-fluid">
+  <div class="my-container" style="position: relative">
+    <div class="swiper-container" style="overflow-x: hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive" style="width: 100%">
+          <div class="designer-mask">
+            <h3 class="fontSizeRem24">是您</h3>
+            <p class="fontSizeRem20">首席设计师</p>
+            <span class="fontSizeRem16">设计十年了</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive" style="width: 100%">
+          <div class="designer-mask">
+            <h3 class="fontSizeRem24">是您</h3>
+            <p class="fontSizeRem20">首席设计师</p>
+            <span class="fontSizeRem16">设计十年了</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive" style="width: 100%">
+          <div class="designer-mask">
+            <h3 class="fontSizeRem24">是您</h3>
+            <p class="fontSizeRem20">首席设计师</p>
+            <span class="fontSizeRem16">设计十年了</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive" style="width: 100%">
+          <div class="designer-mask">
+            <h3 class="fontSizeRem24">是您</h3>
+            <p class="fontSizeRem20">首席设计师</p>
+            <span class="fontSizeRem16">设计十年了</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive" style="width: 100%">
+          <div class="designer-mask">
+            <h3 class="fontSizeRem24">是您</h3>
+            <p class="fontSizeRem20">首席设计师</p>
+            <span class="fontSizeRem16">设计十年了</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive" style="width: 100%">
+          <div class="designer-mask">
+            <h3 class="fontSizeRem24">是您</h3>
+            <p class="fontSizeRem20">首席设计师</p>
+            <span class="fontSizeRem16">设计十年了</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive" style="width: 100%">
+          <div class="designer-mask">
+            <h3 class="fontSizeRem24">是您</h3>
+            <p class="fontSizeRem20">首席设计师</p>
+            <span class="fontSizeRem16">设计十年了</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="add-arrows my-add-arrows">
+      <div class="swiper-button-next"  style="position: absolute"></div>
+      <div class="swiper-button-prev"  style="position: absolute"></div>
+    </div>
+  </div>
+
+
+      <div class="row mt-lg-4 mt-md-4 mt-sm-4 mt-2 mb-lg-4 mb-md-4 mb-sm-4 mb-2 flexBox-center">
+        <a href="" class="fontSizeRem20 more">查看更多的设计师--></a>
+      </div>
+</section>
+<!--首席设计师 end-->
+
+
+
+<!--设计师免费为你设计-->
+<section class="container form-my pt-lg-5 mt-lg-5 mt-md-3 mt-sm-2 mt-3">
+  <div class="row form-my-title flex-column mb-lg-5 mb-3  offset-lg-2">
+    <h4 class="fontSizeRem24">设计师免费为你设计</h4>
+    <p class="fontSizeRem18 ml-lg-5 ">更懂产品室内设计，就是松霖设计</p>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 offset-lg-2 col-md-6 col-sm-12 col-12 ">
+      <img src="assets/images/img/chair_img.png" class="img-responsive my-mb-show-chaiir">
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+      <form>
+        <div class="form-group mb-4">
+          <input type="text" class="form-control border" id="name" placeholder="如何称呼您?">
+        </div>
+        <div class="form-group mb-4">
+          <input type="tel" class="form-control border" id="tel" placeholder="您的手机号码是？">
+        </div>
+        <div class="form-group mb-4">
+          <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-6 col-6" style="padding: 0 0 0 15px;">
+              <input type="text" class="form-control border" placeholder="请您输入验证码">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-6 m-0 p-0">
+              <button type="submit" class="btn my-btn-primary fontColorFFF" style="width: 90%">获取验证码</button>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn my-btn-primary fontColorFFF" style="width: 100%">立即预约</button>
+
+      </form>
+    </div>
+  </div>
+</section>
+<!--设计师免费为你设计-->
+
+
+<!--footer start-->
+<div id="footer"></div>
+<!--footer end-->
+
+<!--float  start-->
+<div id="float"></div>
+<!--float end-->
+
+
+<!-- 兼容低版本的IE，必须要使用1.x的版本 -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/imageflow.js"></script>
+<script src="assets/bootstrap_dist/js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        slideToClickedSlide: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+</body>
+
+</html>

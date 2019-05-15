@@ -1,0 +1,266 @@
+/**
+  * Created by wangyang on 2019-05-06.
+  * itwangyang@gmail.com
+  * http://www.itwangyang.xyz
+*/
+
+.logoImg{
+    position:relative;
+    animation:mymove 2s infinite;
+    -moz-animation:mymove 2s infinite; /* Firefox */
+    -webkit-animation:mymove 2s infinite; /* Safari and Chrome */
+    -o-animation:mymove 2s infinite; /* Opera */
+    animation-iteration-count:1;
+}
+
+@keyframes mymove
+{
+    from {top:-50px;}
+    to {top:0;}
+}
+
+@-moz-keyframes mymove /* Firefox */
+{
+    from {top:-50px;}
+    to {top:0;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+    from {top:-50px;}
+    to {top:0;}
+}
+
+@-o-keyframes mymove /* Opera */
+{
+    from {top:-50px;}
+    to {top:0;}
+}
+
+
+.text-li{
+    position:relative;
+    animation:text-li 2s infinite;
+    -moz-animation:text-li 2s infinite; /* Firefox */
+    -webkit-animation:text-li 2s infinite; /* Safari and Chrome */
+    -o-animation:text-li 2s infinite; /* Opera */
+    animation-iteration-count:1;
+    animation-delay:0s;
+}
+
+@keyframes text-li
+{
+    from {opacity: 0;left:-200px;}
+    to {opacity: 1;left:0;}
+}
+
+@-moz-keyframes text-li /* Firefox */
+{
+    from {opacity: 0;left:-200px;}
+    to {opacity: 1;left:0;}
+}
+
+@-webkit-keyframes text-li /* Safari and Chrome */
+{
+    from {opacity: 0;left:-200px;}
+    to {opacity: 1;left:0;}
+}
+
+@-o-keyframes text-li /* Opera */
+{
+    from {opacity: 0;left:-200px;}
+    to {opacity: 1;left:0;}
+}
+
+
+.banner-text{
+    position:relative;
+    animation:banner-text 2s infinite;
+    -moz-animation:banner-text 2s infinite; /* Firefox */
+    -webkit-animation:banner-text 2s infinite; /* Safari and Chrome */
+    -o-animation:banner-text 2s infinite; /* Opera */
+    animation-iteration-count:1;
+    animation-delay:0s;
+}
+
+@keyframes banner-text
+{
+    from {bottom:-50px;}
+    to {bottom:0;}
+}
+
+@-moz-keyframes banner-text /* Firefox */
+{
+    from {bottom:-50px;}
+    to {bottom:0;}
+}
+
+@-webkit-keyframes banner-text /* Safari and Chrome */
+{
+    from {bottom:-50px;}
+    to {bottom:0;}
+}
+
+@-o-keyframes banner-text /* Opera */
+{
+    from {bottom:-50px;}
+    to {bottom:0;}
+}
+
+.service-info-left{
+    position:relative;
+    animation:service-info-left 2s infinite;
+    -moz-animation:service-info-left 2s infinite; /* Firefox */
+    -webkit-animation:service-info-left 2s infinite; /* Safari and Chrome */
+    -o-animation:service-info-left 2s infinite; /* Opera */
+    animation-iteration-count:1;
+    animation-delay:0s;
+}
+
+@keyframes service-info-left
+{
+    from {left:-300px;}
+    to {left:0;}
+}
+
+@-moz-keyframes service-info-left /* Firefox */
+{
+    from {left:-300px;}
+    to {left:0;}
+}
+
+@-webkit-keyframes service-info-left /* Safari and Chrome */
+{
+    from {left:-300px;}
+    to {left:0;}
+}
+
+@-o-keyframes service-info-left /* Opera */
+{
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+
+
+.service-info-mid{
+    position:relative;
+    animation:service-info-mid 2s infinite;
+    -moz-animation:service-info-mid 2s infinite; /* Firefox */
+    -webkit-animation:service-info-mid 2s infinite; /* Safari and Chrome */
+    -o-animation:service-info-mid 2s infinite; /* Opera */
+    animation-iteration-count:1;
+    animation-delay:0s;
+}
+
+@keyframes service-info-mid
+{
+    from {bottom:-50px;}
+    to {bottom:0;}
+}
+
+@-moz-keyframes service-info-mid /* Firefox */
+{
+    from {bottom:-50px;}
+    to {bottom:0;}
+}
+
+@-webkit-keyframes service-info-mid /* Safari and Chrome */
+{
+    from {bottom:-50px;}
+    to {bottom:0;}
+}
+
+@-o-keyframes service-info-mid /* Opera */
+{
+    from {bottom:-50px;}
+    to {bottom:0;}
+}
+
+.service-info-mid1{
+    position:relative;
+    animation:service-info-mid1 1s infinite;
+    -moz-animation:service-info-mid1 1s infinite; /* Firefox */
+    -webkit-animation:service-info-mid1 1s infinite; /* Safari and Chrome */
+    -o-animation:service-info-mid1 1s infinite; /* Opera */
+    animation-iteration-count:1;
+    animation-delay:.6s;
+}
+
+@keyframes service-info-mid1
+{
+    from {bottom:-50px;opacity: 0}
+    to {bottom:0;opacity: 1}
+}
+
+@-moz-keyframes service-info-mid1 /* Firefox */
+{
+    from {bottom:-50px;opacity: 0}
+    to {bottom:0;opacity: 1}
+}
+
+@-webkit-keyframes service-info-mid1 /* Safari and Chrome */
+{
+    from {bottom:-50px;opacity: 0}
+    to {bottom:0;opacity: 1}
+}
+
+@-o-keyframes service-info-mid1 /* Opera */
+{
+    from {bottom:-50px;opacity: 0}
+    to {bottom:0;opacity: 1}
+}
+
+.service-info-right{
+    position:relative;
+    animation:service-info-right 2s infinite;
+    -moz-animation:service-info-right 2s infinite; /* Firefox */
+    -webkit-animation:service-info-right 2s infinite; /* Safari and Chrome */
+    -o-animation:service-info-right 2s infinite; /* Opera */
+    animation-iteration-count:1;
+    animation-delay:0s;
+}
+
+@keyframes service-info-right
+{
+    from {right:-300px;}
+    to {right:0;}
+}
+
+@-moz-keyframes service-info-right /* Firefox */
+{
+    from {right:-300px;}
+    to {right:0;}
+}
+
+@-webkit-keyframes service-info-right /* Safari and Chrome */
+{
+    from {right:-300px;}
+    to {right:0;}
+}
+
+@-o-keyframes service-info-right /* Opera */
+{
+    from {right:-300px;}
+    to {right:0;}
+}
+
+
+
+.index-item-list img{
+    transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
+}
+.index-item-list img:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+}

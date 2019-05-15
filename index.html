@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <!-- 编码格式 -->
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- 作者 -->
+  <meta name="author" content="itWangCoder">
+  <!-- 网页描述 -->
+  <meta name="description" content="装饰家居d的公司">
+  <!-- 关键字使用","分隔 -->
+  <meta name="keywords" content="装饰,家秀,家具,家居,房子">
+  <!-- 禁止浏览器从本地机的缓存中调阅页面内容 -->
+  <meta http-equiv="Pragma" content="no-cache">
+  <!-- 用来防止别人在框架里调用你的页面 -->
+  <meta http-equiv="Window-target" content="_top">
+  <!-- content的参数有all，none，index，noindex，follow，nofollow，默认是all -->
+  <meta name="robots" content="none">
+  <!-- 收藏图标 -->
+  <link rel="Shortcut Icon" href="favicon.ico">
+  <!-- 网页不会被缓存 -->
+  <!--<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">-->
+  <!-- 解决部分兼容性问题，如果安装了GCF，则使用GCF来渲染页面，如果未安装GCF，则使用最高版本的IE内核进行渲染。 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+  <!-- 页面按原比例显示 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--这个reset.css  是初始化的样式-->
+   <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/bootstrap_dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+
+
+  <!--itwangCoder.css  是响应式公共的样式，自己封装的-->
+  <link rel="stylesheet" href="assets/css/itwangCoder.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/my-keyframes.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /*.swiper-slide {*/
+      /*background-size: cover;*/
+      /*background-position: center;*/
+    /*}*/
+
+    .gallery-top {
+      height: 80%;
+      width: 100%;
+    }
+
+    .gallery-thumbs {
+      height: 20%;
+      box-sizing: border-box;
+      /*padding: 10px 0;*/
+      position: relative;
+    }
+
+    .gallery-thumbs .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .my-img-responsive{
+      width: 100% !important;
+      height: auto !important;
+    }
+
+  </style>
+
+  <style>
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      transition: 300ms;
+    }
+
+    .swiper-slide1:not(.swiper-slide-active) {
+      transform: scale(0.8);
+    }
+  </style>
+
+  <style>
+    .swiper-container1 {
+      width: 100%;
+      /*height: 300px;*/
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /*.swiper-container1 .swiper-slide {*/
+      /*background-size: cover;*/
+      /*background-position: center;*/
+    /*}*/
+
+    .gallery-top {
+      /*height: 80%;*/
+      width: 100%;
+    }
+
+    .gallery-thumbs {
+      /*height: 20%;*/
+      box-sizing: border-box;
+      padding: 10px 0;
+      height: 143px;
+    }
+
+    /*.gallery-thumbs .swiper-slide {*/
+      /*height: 100%;*/
+      /*opacity: 0.4;*/
+    /*}*/
+
+    .gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+<div id="header"></div>
+
+
+<!--滚动屏幕显示的导航条 start-->
+<nav class="navbar navbar-expand-md navbar-dark flexBox-flex-end my-navbar  display-none" id="scrollup">
+  <div class="collapse navbar-collapse" id="navbarCollapse2">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link fontColor333 nav-link-hover-color" href="#">首页 <span class="slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">家装风格<span class="slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">服务团队<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">品质家居<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">全景展示<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">案例赏析<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">了解松霖</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0 search-input">
+      <input class="form-control mr-sm-2" type="text" placeholder="搜索需要的商品" aria-label="Search">
+      <span><img src="assets/images/icon/icon_search.png" class="img-responsive"></span>
+    </form>
+  </div>
+</nav>
+<!--滚动屏幕显示的导航条 end-->
+
+
+
+<!--banner-vr start-->
+<section class="banner-vr">
+  <div id="banner-vr-img">
+    <img src="assets/images/img/banner_img.png" class="img-responsive">
+    <div id="banner-vr-logo">
+      <img src="assets/images/img/icon_cooperation.png" class=" img-responsive logoImg">
+      <ul class="flexBox-center mt-5 banner-vr-ul-item border-bottom text-li">
+        <li class="mr-3 fontColorFFF">整屋设计</li>
+        <li class="mr-3 fontColorFFF">品质家居</li>
+        <li class="mr-3 fontColorFFF">专业团队</li>
+        <li class="mr-3 fontColorFFF">无忧售后</li>
+      </ul>
+      <h4 class="mt-3 banner-vr-ul-text fontColorFFF flexBox-center banner-text">创造设计高端的整屋家居</h4>
+    </div>
+    <a href="#" class="my-bg-white  fontSize18"> 观看全景 > </a>
+  </div>
+
+
+  <style>
+
+
+  </style>
+</section>
+<!--banner-vr end-->
+
+
+<!-- banner-style start -->
+<section class="banner-style">
+  <!-- item-title  start-->
+  <div class="item-title flexBox-center mt-4 mb-4">
+    <span class="my-border"></span>
+    <div class="flex-column flexBox-center ml-3 mr-3">
+      <a class="fontSizeRem24">家装风格</a>
+      <a class="fontSizeRem18">Decoration style</a>
+    </div>
+    <span class="my-border"></span>
+  </div>
+  <!-- item-title end -->
+
+  <!--banner-style-item start-->
+  <article class="banner-style-item container my-container">
+    <div class="xinxi_solution_main">
+      <div class="xinxi_solution_bg">
+        <div class="main_mobile">
+          <ul>
+            <li class="one on">
+              <div class="left"></div>
+              <div class="left_top">
+                <i>工业类</i>
+              </div>
+              <div class="right">
+                <dl>
+                  <p class="line-clamp4 pl-3 pr-3">手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业行业解决方通讯行业解决方案手机通讯行业解决方案3</p>
+                </dl>
+              </div>
+            </li>
+            <li class="one">
+              <div class="left"></div>
+              <div class="left_top">
+                <i>商贸类</i>
+              </div>
+              <div class="right">
+                <dl style="margin-top: -120px;">
+                  手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案
+                </dl>
+              </div>
+            </li>
+            <li class="one">
+              <div class="left"></div>
+              <div class="left_top">
+                <i>商贸类</i>
+              </div>
+              <div class="right">
+                <dl style="margin-top: -120px;">
+                  手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案
+                </dl>
+              </div>
+            </li>
+            <li class="one">
+              <div class="left"></div>
+              <div class="left_top">
+                <i>商贸类</i>
+              </div>
+              <div class="right">
+                <dl style="margin-top: -120px;">
+                  手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案
+                </dl>
+              </div>
+            </li>
+            <li class="one">
+              <div class="left"></div>
+              <div class="left_top">
+                <i>商贸类</i>
+              </div>
+              <div class="right">
+                <dl style="margin-top: -120px;">
+                  手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案
+                </dl>
+              </div>
+            </li>
+            <li class="one">
+              <div class="left"></div>
+              <div class="left_top">
+                <i>商贸类</i>
+              </div>
+              <div class="right">
+                <dl style="margin-top: -120px;">
+                  手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案
+                </dl>
+              </div>
+            </li>
+            <li class="one">
+              <div class="left"></div>
+              <div class="left_top">
+                <i>商贸类</i>
+              </div>
+              <div class="right">
+                <dl style="margin-top: -120px;">
+                  手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案
+                </dl>
+              </div>
+            </li>
+            <li class="one">
+              <div class="left"></div>
+              <div class="left_top">
+                <i>商贸类</i>
+              </div>
+              <div class="right">
+                <dl style="margin-top: -120px;">
+                  手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案
+                </dl>
+              </div>
+            </li>
+            <li class="one">
+              <div class="left"></div>
+              <div class="left_top">
+                <i>商贸类</i>
+              </div>
+              <div class="right">
+                <dl style="margin-top: -120px;">
+                  手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案手机通讯行业解决方案
+                </dl>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+  <!--banner-style-item end-->
+
+  <!--banner-show start-->
+  <section class="container banner-show mt-3">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <div class="index-item-list">
+          <img src="assets/images/icon/icon_house.png" class="img-responsive mt-2 mb-3">
+          <h3 class="fontSizeRem24 fontColorbd7424">免费设计</h3>
+          <p class="fontSizeRem18 fontColor333 ">现场测量</p>
+          <p class="fontSizeRem18 fontColor333 ">全屋设计出图</p>
+          <p class="fontSizeRem18 fontColor333">费用预估</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <div class="index-item-list">
+          <img src="assets/images/icon/icon_car.png" class="img-responsive mt-2 mb-3">
+          <h3 class="fontSizeRem24 fontColorbd7424">送货到家</h3>
+          <p class="fontSizeRem18 fontColor333">送货上门</p>
+          <p class="fontSizeRem18 fontColor333">专业工人组装</p>
+          <p class="fontSizeRem18 fontColor333">&nbsp;</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <div class="index-item-list">
+          <img src="assets/images/icon/icon_masonry.png" class="img-responsive mt-2 mb-3">
+          <h3 class="fontSizeRem24 fontColorbd7424">品质保障</h3>
+          <p class="fontSizeRem18 fontColor333">现场测量</p>
+          <p class="fontSizeRem18 fontColor333">设计出图</p>
+          <p class="fontSizeRem18 fontColor333">费用预估</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+        <div class="index-item-list">
+          <img src="assets/images/icon/icon_cooperation.png" class="img-responsive mt-2 mb-3">
+          <h3 class="fontSizeRem24 fontColorbd7424">售后无忧</h3>
+          <p class="fontSizeRem18 fontColor333">现场测量</p>
+          <p class="fontSizeRem18 fontColor333">设计出图</p>
+          <p class="fontSizeRem18 fontColor333">费用预估</p>
+        </div>
+      </div>
+    </div>
+    <div class="flexBox-center mt-3 mb-3">
+      <button href="" class="banner-show-btn fontColorFFF fontSizeRem20" data-toggle="modal" data-target="#myModal">在线预约</button>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+          <!-- 模态框头部 -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- 模态框主体 -->
+          <div class="modal-body">
+            <section class="container form-my">
+              <div class="row form-my-title flex-column">
+                <h4 class="fontSizeRem24">设计师免费为你设计</h4>
+                <p class="fontSizeRem18 ml-lg-5 ">更懂产品室内设计，就是松霖设计</p>
+              </div>
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12  offset-lg-1">
+                  <img src="assets/images/img/chair_img.png" class="img-responsive  my-img-responsive">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                  <form>
+                    <div class="form-group mb-4">
+                      <input type="text" class="form-control border"  placeholder="如何称呼您?">
+                    </div>
+                    <div class="form-group mb-4">
+                      <input type="tel" class="form-control border"  placeholder="您的手机号码是？">
+                    </div>
+                    <div class="form-group mb-4">
+                      <div class="row">
+                        <div class="col-lg-8 col-md-6 col-sm-6 col-6" style="padding: 0 0 0 15px;">
+                          <input type="text" class="form-control border" placeholder="请您输入验证码">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6 m-0 p-0">
+                          <button type="button" class="btn my-btn-primary fontColorFFF">获取验证码</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button type="button" class="btn my-btn-primary fontColorFFF" style="width: 100%">立即预约</button>
+
+                  </form>
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--banner-show end-->
+
+
+</section>
+<!-- banner-style end -->
+
+
+<!--design-team start-->
+<section class="design-team">
+  <!-- item-title  start-->
+  <div class="item-title flexBox-center mt-4 mb-4">
+    <span class="my-border"></span>
+    <div class="flex-column flexBox-center ml-3 mr-3">
+      <a class="fontSizeRem24">设计团队</a>
+      <a class="fontSizeRem18">Design team</a>
+    </div>
+    <span class="my-border"></span>
+  </div>
+  <!-- item-title end -->
+
+  <!--design-team-item start-->
+  <div class="design-team-item my-container" style="overflow-x: hidden">
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper my-swiper-wrapper-1">
+        <div class="swiper-slide swiper-slide1">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive item-1">
+          <div class="flexBox-direction-column flex-column item-list-1" style="display: none">
+            <h4 class="fontSizeRem24 item-111">创智</h4>
+            <h5 class="fontSizeRem20 item-222">首席设计师</h5>
+            <p class="fontSizeRem18 item-333"> 首席设计师</p>
+            <h4 class="fontSizeRem24 item-444">首席设计师</h4>
+            <p class="fontSizeRem18 item-555">首席设计师 </p>
+          </div>
+
+        </div>
+        <div class="swiper-slide swiper-slide1">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive">
+        </div>
+        <div class="swiper-slide swiper-slide1">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive">
+        </div>
+        <div class="swiper-slide swiper-slide1">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive">
+        </div>
+        <div class="swiper-slide swiper-slide1">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive">
+        </div>
+        <div class="swiper-slide swiper-slide1">
+          <img src="assets/images/img/banner_sm_img.png" class="img-responsive">
+        </div>
+      </div>
+    </div>
+
+    <!--my-swiper-wrapper-1-->
+    <div class="flexBox-direction-column item-list-1 mt-lg-5 mt-md-5 mt-sm-3 mt-3 designer-information">
+      <h4 class="haha11 fontSizeRem24">李玉</h4>
+      <h5 class="haha22 fontSizeRem20">首席设计师</h5>
+      <p class="haha33 fontSizeRem18"> 首席设计师</p>
+      <h5 class="haha44 fontSizeRem24">擅长风格</h5>
+      <p class="haha55 fontSizeRem18"> 首席设计师</p>
+    </div>
+
+    <div class="row flexBox-center fontSizeRem18"><a class="more" href="service-designer.html">了解更多设计师&nbsp;--></a></div>
+
+
+  </div>
+  <!--design-team-item end-->
+
+</section>
+<!--design-team end-->
+
+
+<!-- home-decoration-appreciation start-->
+<section class="home-decoration-appreciation container" >
+
+  <!-- item-title  start-->
+  <div class="item-title flexBox-center mt-4 mb-4">
+    <span class="my-border"></span>
+    <div class="flex-column flexBox-center ml-3 mr-3">
+      <a class="fontSizeRem24">家装欣赏</a>
+      <a class="fontSizeRem18">Case Appreciation</a>
+    </div>
+    <span class="my-border"></span>
+  </div>
+  <!-- item-title end -->
+
+  <!-- Swiper -->
+  <section>
+    <div class="swiper-container1 gallery-top" style="overflow-x: hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner1.png" alt="" class="lg-img-show">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner1.png" alt="" class="lg-img-show">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner1.png" alt="" class="lg-img-show">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner1.png" alt="" class="lg-img-show">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner1.png" alt="" class="lg-img-show">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner1.png" alt="" class="lg-img-show">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner1.png" alt="" class="lg-img-show">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner1.png" alt="" class="lg-img-show">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/images/img/banner1.png" alt="" class="lg-img-show">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>
+
+
+        <!--<div class="swiper-slide" style="background-image:url(assets/images/img/banner1.png)">
+          <div class="swiper-slide-mask">
+            <h4 class="fontSizeRem24">中铁元湾210m</h4>
+            <p class="fontSizeRem18"> 在钢筋水泥的都市里
+              在玻璃之城
+              我们总要过成自己喜欢的样子。</p>
+            <img src="assets/images/icon/play.png" alt="" class="img-responsive">
+            <p>设计师：张斌</p>
+
+          </div>
+        </div>-->
+
+      </div>
+
+    </div >
+    <div style="position: relative">
+      <div class="swiper-container1 gallery-thumbs" style="overflow-x: hidden">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/images/img/banner1.png" alt="" class="img-responsive">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/img/banner1.png" alt="" class="img-responsive">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/img/banner1.png" alt="" class="img-responsive">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/img/banner1.png" alt="" class="img-responsive">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/img/banner1.png" alt="" class="img-responsive">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/img/banner1.png" alt="" class="img-responsive">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/img/banner1.png" alt="" class="img-responsive">
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/images/img/banner1.png" alt="" class="img-responsive">
+          </div>
+          <!--<div class="swiper-slide" style="background-image:url(assets/images/img/banner1.png)"></div>-->
+        </div>
+
+      </div>
+
+      <!-- Add Arrows -->
+      <div class="add-arrows" style="position: absolute;">
+        <div class="swiper-button-next my-swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev my-swiper-button-prev swiper-button-white"></div>
+      </div>
+
+      <style>
+
+      </style>
+
+    </div>
+
+  </section>
+
+  <div class="row flexBox-center fontSizeRem18 mt-3"><a href="case-appreciation.html" class="more">查看更多精品案例&nbsp;--></a></div>
+
+
+
+</section>
+<!--home-decoration-appreciation end-->
+
+<!--品质家居-->
+<section class="pinzhi">
+  <!-- item-title  start-->
+  <div class="item-title flexBox-center mt-4 mb-4">
+    <span class="my-border"></span>
+    <div class="flex-column flexBox-center ml-3 mr-3">
+      <a class="fontSizeRem24">品质家居</a>
+      <a class="fontSizeRem18">Case Appreciation</a>
+    </div>
+    <span class="my-border"></span>
+  </div>
+  <!-- item-title end -->
+
+
+  <section class="pinzhi-item  container-fluid">
+    <section class="container-fluid flexBox-center">
+      <div class="list-item-pinzhi">
+        <img src="assets/images/img/index_show_img.png" class="img-responsive">
+        <section class="longzhao fontSizeRem20">
+          <p class="fontColorFFF">卧室</p>
+          <span class="fontColorFFF">ROOM</span>
+        </section>
+        <div class="mask-hover-index"></div>
+      </div>
+
+      <div class="list-item-pinzhi">
+        <img src="assets/images/img/index_show_img.png" class="img-responsive">
+        <section class="longzhao fontSizeRem20">
+          <p class="fontColorFFF">卧室</p>
+          <span class="fontColorFFF">ROOM</span>
+        </section>
+        <div class="mask-hover-index"></div>
+      </div>
+
+      <div class="list-item-pinzhi">
+        <img src="assets/images/img/index_show_img.png" class="img-responsive">
+        <section class="longzhao fontSizeRem20">
+          <p class="fontColorFFF">卧室</p>
+          <span class="fontColorFFF">ROOM</span>
+        </section>
+        <div class="mask-hover-index"></div>
+      </div>
+
+      <div class="list-item-pinzhi">
+        <img src="assets/images/img/index_show_img.png" class="img-responsive">
+        <section class="longzhao fontSizeRem20">
+          <p class="fontColorFFF">卧室</p>
+          <span class="fontColorFFF">ROOM</span>
+        </section>
+        <div class="mask-hover-index"></div>
+      </div>
+
+
+
+    </section>
+
+  </section>
+</section>
+
+
+<!--设计师免费为你设计-->
+<section class="container form-my pt-lg-5 mt-lg-5 mt-md-3 mt-sm-2 mt-3">
+  <div class="row form-my-title flex-column mb-lg-5 mb-3  offset-lg-2">
+    <h4 class="fontSizeRem24">设计师免费为你设计</h4>
+    <p class="fontSizeRem18 ml-lg-5 ">更懂产品室内设计，就是松霖设计</p>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 offset-lg-2 col-md-6 col-sm-12 col-12 ">
+      <img src="assets/images/img/chair_img.png" class="img-responsive my-mb-show-chaiir">
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+      <form>
+        <div class="form-group mb-4">
+          <input type="text" class="form-control border" id="name" placeholder="如何称呼您?">
+        </div>
+        <div class="form-group mb-4">
+          <input type="tel" class="form-control border" id="tel" placeholder="您的手机号码是？">
+        </div>
+        <div class="form-group mb-4">
+          <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-6 col-6" style="padding: 0 0 0 15px;">
+              <input type="text" class="form-control border" placeholder="请您输入验证码">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-6 m-0 p-0">
+              <button type="submit" class="btn my-btn-primary fontColorFFF" style="width: 90%">获取验证码</button>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn my-btn-primary fontColorFFF" style="width: 100%">立即预约</button>
+
+      </form>
+    </div>
+  </div>
+</section>
+<!--设计师免费为你设计-->
+
+
+
+<!--footer start-->
+<div id="footer"></div>
+<!--footer end-->
+
+<!--float  start-->
+<div id="float"></div>
+<!--float end-->
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/bootstrap_dist/js/bootstrap.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/imageflow.js"></script>
+<script src="js/common.js"></script>
+<script>
+
+    // var wow = new WOW({
+    //     boxClass: 'wow',
+    //     animateClass: 'animated',
+    //     offset: 0,
+    //     mobile: true,
+    //     live: true
+    // });
+    // wow.init();
+    $(function () {
+        $('.xinxi_solution_main ul li:eq(0)').addClass('on');
+        $('.xinxi_solution_main ul li:eq(1)').addClass('b2');
+        $('.xinxi_solution_main ul li:eq(2)').addClass('b3');
+        $('.xinxi_solution_main ul li:eq(3)').addClass('b4');
+        $('.xinxi_solution_main ul li:eq(4)').addClass('b5');
+        $('.xinxi_solution_main ul li:eq(5)').addClass('b6');
+        $('.xinxi_solution_main ul li:eq(6)').addClass('b7');
+        $('.xinxi_solution_main ul li:eq(7)').addClass('b8');
+        // $('.xinxi_solution_main ul li:gt(3)').hide();
+        //当三级分类大于8个的是，成两排显示
+        $('.xinxi_solution_main ul li').each(function () {
+            var len = $(this).find('.right dl a').length;
+            if (len > 8) {
+                $(this).find('.right dl a').addClass('yichu');
+            }
+        });
+
+        //解决方案效果
+        $('.xinxi_solution_main ul li').each(function () {
+            var left_h = $(this).find('.left_top').height();
+            $(this).find('.left_top').css({
+                'top': '50%',
+                'margin-top': -left_h / 2
+            });
+
+            var dl_h = $(this).find('.right dl').height();
+            $(this).find('.right dl').css({
+                'margin-top': -dl_h / 2
+            });
+        });
+        $('.xinxi_solution_main ul li').click(function () {
+            $(this).addClass('on').siblings().removeClass('on');
+        });
+        $('.xinxi_solution_main_mobile ul li:first-child').addClass('on');
+
+        $('.xinxi_solution_main_mobile ul li').click(function () {
+            $(this).addClass('on').siblings().removeClass('on');
+        });
+
+        $(".solu-category .solu-description").each(function () {
+            var maxwidth = 60;
+            if ($(this).text().length > maxwidth) {
+                $(this).text($(this).text().substring(0, maxwidth));
+                $(this).html($(this).html() + '...');
+            }
+        });
+
+
+    });
+
+
+    //  轮播
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 5,
+        centerInsufficientSlides: true,
+        centeredSlides: true,
+        spaceBetween: 1,
+        loop: true,
+        initialSlide: 3,//用来设定页面加载完成时，第几张图片先显示出来
+        slidesPerColumn: 1,
+        grabCursor: true,
+        uniqueNavElements: false,
+        slideToClickedSlide: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        loop: true,
+        loopedSlides: 5, //looped slides should be the same
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+    });
+
+
+
+    //    设计师
+    $(".my-swiper-wrapper-1").click(function () {
+        var item111 = $(".item-111").text();
+        var item222 = $(".item-222").text();
+        var item333 = $(".item-333").text();
+        var item444 = $(".item-444").text();
+        var item555 = $(".item-555").text();
+        $('.haha11').text(item111);
+        $('.haha22').text(item222);
+        $('.haha33').text(item333);
+        $('.haha44').text(item444);
+        $('.haha55').text(item555);
+    });
+
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        loop: true,
+        freeMode: true,
+        loopedSlides: 5, //looped slides should be the same
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        loop: true,
+        loopedSlides: 5, //looped slides should be the same
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs,
+        },
+    });
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

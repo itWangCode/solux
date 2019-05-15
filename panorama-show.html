@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <!-- 编码格式 -->
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- 作者 -->
+  <meta name="author" content="itWangCoder">
+  <!-- 网页描述 -->
+  <meta name="description" content="装饰家居d的公司">
+  <!-- 关键字使用","分隔 -->
+  <meta name="keywords" content="装饰,家秀,家具,家居,房子">
+  <!-- 禁止浏览器从本地机的缓存中调阅页面内容 -->
+  <meta http-equiv="Pragma" content="no-cache">
+  <!-- 用来防止别人在框架里调用你的页面 -->
+  <meta http-equiv="Window-target" content="_top">
+  <!-- content的参数有all，none，index，noindex，follow，nofollow，默认是all -->
+  <meta name="robots" content="none">
+  <!-- 收藏图标 -->
+  <link rel="Shortcut Icon" href="favicon.ico">
+  <!-- 网页不会被缓存 -->
+  <!--<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">-->
+  <!-- 解决部分兼容性问题，如果安装了GCF，则使用GCF来渲染页面，如果未安装GCF，则使用最高版本的IE内核进行渲染。 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+  <!-- 页面按原比例显示 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--这个reset.css  是初始化的样式-->
+   <link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/bootstrap_dist/css/bootstrap.min.css">
+
+  <!--itwangCoder.css  是响应式公共的样式，自己封装的-->
+  <link rel="stylesheet" href="assets/css/itwangCoder.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/my-keyframes.css">
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+
+
+    .lba {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      bottom: 100px;
+      text-align: center;
+      color: white;
+      height: 200px;
+    }
+
+
+    /*首席设计师*/
+    .Designer {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      margin: 0 auto
+    }
+
+    /*点击左右滚动*/
+    .WhatLeft, .WhatRight {
+      width: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .WhatLeft span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .WhatLeft img {
+      width: 100%;
+      height: auto;
+    }
+
+    .WhatRight span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .WhatRight img {
+      width: 100%;
+      height: auto;
+    }
+
+    /*点击左右滚动*/
+    /*中间内容*/
+    .planner {
+      width: 90%;
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+    }
+
+    .planners {
+      display: flex;
+      position: absolute;
+      top: 0px;
+      height: 100%;
+      align-items: center;
+    }
+
+    .planners span {
+      flex-shrink: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tub img {
+      width: 100%;
+      height: auto;
+    }
+
+    .tub {
+      width: 70%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /*中间内容*/
+    .menb {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    /*滚动条*/
+    .guna {
+      width: 15%;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: absolute;
+      right: 9%;
+      overflow-y: auto;
+      border: none;
+      bottom: 220px;
+    }
+
+    .guna1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      color: white
+    }
+
+    .guna1:hover {
+      background: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+
+
+    .test-1::-webkit-scrollbar { /*滚动条整体样式*/
+      width: 10px; /*高宽分别对应横竖滚动条的尺寸*/
+      height: 1px;
+    }
+
+    .test-1::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: #535353;
+    }
+
+    .test-1::-webkit-scrollbar-track { /*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background: #EDEDED;
+    }
+  </style>
+  <style>
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .guna{
+        width: 28%;
+        background: rgba(0, 0, 0, 0.35);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        right: 9%;
+        overflow-y: auto;
+        border: none;
+        bottom: 217px;
+        height: 300px !important;
+      }
+    }
+
+
+
+    @media screen and (max-width: 992px) {
+      div#banner-vr-logo img {
+        width: 80px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .fontSizeRem30 {
+        font-size: 12px;
+      }
+
+      .section-wrap .section .title img {
+        height: 100%;
+        width: auto;
+      }
+
+      .img-about, .img-about-img {
+        display: none;
+      }
+
+      .Designer {
+        display: none;
+      }
+
+      .list-item {
+        display: flex;
+        flex-flow: wrap;
+        height: 200px;
+        overflow-y: auto;
+      }
+
+      .guna {
+        width: auto;
+        background: rgba(0, 0, 0, 0.35);
+        display: block;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        right: 0;
+        overflow-y: -moz-scrollbars-none;
+        border: 0;
+        bottom: 0;
+      }
+
+      .guna1 {
+        display: flex;
+        align-items: center;
+        height: 28px !important;
+        line-height: 2;
+        width: 50%;
+        flex-wrap: wrap;
+        font-size: 14px !important;
+        overflow: hidden;
+      }
+
+
+    }
+
+    .header {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      background-color: #000000;
+      opacity: .6;
+      position: absolute;
+      z-index: 10000;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    form.form-inline.mt-2.mt-md-0.search-input input {
+      background: none;
+      color: white;
+    }
+
+    .section-4 {
+      position: relative;
+    }
+
+    .section-5 {
+      position: relative;
+    }
+
+    .my-footer-about {
+      position: absolute;
+      bottom: 0;
+      z-index: 12000;
+      width: 100%;
+      display: block;
+
+    }
+
+
+    @media screen and (max-width: 767px) {
+      div#navbarCollapse {
+        background: #313131;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        opacity: 0.5;
+        left: 0;
+      }
+
+      .header {
+        display: none;
+        width: 100%;
+        height: 90px;
+        padding: 0;
+        background-color: #000000;
+        opacity: .6;
+        position: absolute;
+        z-index: 10000;
+        color: red;
+      }
+    }
+
+    @media screen and (max-width: 365px) {
+      .header {
+        height: 70px;
+      }
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<!--nav start-->
+
+
+<!--banner -->
+<div class="vrs">
+  <iframe src="https://720yun.com/t/aabjupyntu8" name="adlistpage"
+          frameborder=1 scrolling=no width="100%" height="100%" id="fs"></iframe>
+</div>
+
+
+<div class=" lba">
+  <!--点击左右滚动-->
+  <div class="Designer">
+    <!--点击左滚动-->
+    <div class="WhatLeft"><span><img src="assets/images/icon/icon-left.png" class="img-responsive"></span></div>
+    <!--点击左滚动-->
+
+    <!--首席Designer-->
+    <div class="planner">
+      <div class="planners">
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/aabjupyntu7')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/527ju0svtu7?scene_id=23204082')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/527ju0svtu7?scene_id=23204082')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/14aju0yasO0?scene_id=23169550')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/527ju0svtu7?scene_id=23204082')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/38bjkpwaOy4?scene_id=4375833')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/527ju0svtu7?scene_id=23204082')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/f44jv74Orv7?scene_id=21219396')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/527ju0svtu7?scene_id=23204082')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/f44jv74Orv7?scene_id=21219396')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+
+        <!--分割-->
+        <span onclick="fsa('https://720yun.com/t/527ju0svtu7?scene_id=23204082')">
+             <div class="tub">
+              <img src="assets/images/img/show-img1.png" class="img-responsive">
+               <div class="menb"></div>
+              </div>
+            </span>
+        <!--分割-->
+      </div>
+    </div>
+    <!--首席Designer-->
+
+    <!--点击右滚动-->
+    <div class="WhatRight"><span><img src="assets/images/icon/icon-right.png" class="img-responsive"></span></div>
+    <!--点击右滚动-->
+
+    <div style="width: 3%; display: flex; justify-content: center; align-items: center;" class="nn"><img
+        src="assets/images/icon/icon-click-show.png" style="width: 100%; height: auto;" class="ac img-responsive">
+      <img src="assets/images/icon/icon-click-close.png" style="width: 100%; height: auto;" class="bc img-responsive">
+    </div>
+  </div>
+
+
+  <!--点击左右滚动-->
+
+  <div class="guna test-1">
+    <div style="width: 100%;" class="list-item">
+      <span class="guna1 line-clamp1" onclick="fsa('https://720yun.com/t/f44jv74Orv7?scene_id=21219396')">金地花园 现代中式 300平米</span>
+      <span class="guna1 line-clamp1" onclick="fsa('https://720yun.com/t/f44jv74Orv7?scene_id=21219396')">金地花园 现代中式 300平米</span>
+      <span class="guna1 line-clamp1" onclick="fsa('https://720yun.com/t/f44jv74Orv7?scene_id=21219396')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/38bjkpwaOy4?scene_id=4375833')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/38bjkpwaOy4?scene_id=4375833')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/38bjkpwaOy4?scene_id=4375833')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/f44jv74Orv7?scene_id=21219396')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/f44jv74Orv7?scene_id=21219396')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/f44jv74Orv7?scene_id=21219396')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/38bjkpwaOy4?scene_id=4375833')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/38bjkpwaOy4?scene_id=4375833')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/38bjkpwaOy4?scene_id=4375833')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/38bjkpwaOy4?scene_id=4375833')">金地花园 现代中式 300平米</span>
+      <span class="guna1" onclick="fsa('https://720yun.com/t/38bjkpwaOy4?scene_id=4375833')">金地花园 现代中式 300平米</span>
+    </div>
+  </div>
+
+</div>
+<!--banner-->
+
+<div class="handleBtn">
+  <p>列表</p>
+</div>
+
+<div class="handleBtn-back">
+  <a href="index.html">返回</a>
+</div>
+
+
+<!--footer start-->
+<footer class="new-footer flexBox-center container-fluid">
+  <p class="fontSize14">闽公网安备35020502000127号I备案号:闽ICP备15007764号I营业执照 | 厦门松霖家居有限公司◎2015- 2017 AII rights
+    reserved</p>
+</footer>
+<!--footer end-->
+
+
+<!-- 兼容低版本的IE，必须要使用1.x的版本 -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/bootstrap_dist/js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+
+<script type="text/javascript">
+  
+
+
+
+      function sizes() {
+          var ht = $("body").width();
+          $(".vrs").css("width", $(window).width()).css("height", $(window).height());
+
+          //中间内容
+          $(".planners span").css("width", $(".planner").width() * 0.2);
+
+          $(".WhatRight span").css("cursor", " not-allowed");
+          //点击左右滚动
+          $(".WhatLeft span").css("width", $(".WhatLeft").width() * 0.614).css("height", $(".planners").height() * 0.3);
+          $(".WhatRight span").css("width", $(".WhatLeft").width() * 0.614).css("height", $(".planners").height() * 0.3);
+
+          $(".planners span").css("height", $(".tub").height());
+          $(".planners span").eq(0).find(".menb").hide();
+
+          $(".guna").css("height", $(".guna").width() * 1.45);
+          $(".guna1").css("height", ht * 0.025).css("font-size", ht * 0.008);
+          $(".nn").css("margin-left", ht * 0.025);
+          $(".ac").hide();
+      }
+      sizes();
+
+      //首席设计滚动
+
+      //点击左滚
+      var Scrolls = 0;
+      $(".WhatLeft span").click(function () {
+          if (Scrolls >= 0 - $(".planner").width() * 0.75) {
+              $(".WhatRight span").css("cursor", "");
+              $(".WhatLeft span").css("cursor", "");
+              Scrolls = Scrolls - ($(".planner").width() * 0.5);
+              $(".planners").animate({
+                  "left": Scrolls,
+              });
+              console.log(Scrolls);
+          } else {
+              $(".WhatLeft span").css("cursor", " not-allowed");
+          }
+      });
+
+      //点击右滚
+      $(".WhatRight span").click(function () {
+          if (Scrolls <= 0 - $(".planner").width() * 0.25) {
+              $(".WhatRight span").css("cursor", "");
+              $(".WhatLeft span").css("cursor", "");
+              Scrolls = Scrolls + ($(".planner").width() * 0.5);
+              $(".planners").animate({
+                  "left": Scrolls,
+              });
+              console.log(Scrolls);
+          } else {
+              $(".WhatRight span").css("cursor", " not-allowed");
+          }
+      });
+
+
+      //点击
+      $(".planners span").click(function () {
+          for (var i = 0; i < $(".planners span").length; i++) {
+              if (i == $(this).index()) {
+                  // console.log(i);
+                  $(".planners span").eq(i).find(".menb").hide();
+              } else {
+                  $(".planners span").eq(i).find(".menb").show();
+              }
+          }
+      });
+
+
+      $(".guna1").click(function () {
+          for (var i = 0; i < $(".planners span").length; i++) {
+
+              $(".planners span").eq(i).find(".menb").show();
+
+          }
+
+      });
+
+
+      $(".bc").click(function () {
+          $(".ac").show();
+          $(".bc").hide();
+          $(".guna").fadeOut();
+
+
+      });
+
+
+      $(".ac").click(function () {
+          $(".bc").show();
+          $(".ac").hide();
+          $(".guna").fadeIn();
+      });
+
+
+      $(window).resize(function () {
+          sizes();
+      });
+
+      $(document).ready(function () {
+          sizes();
+
+      });
+
+
+      $(document).ready(function () {
+          $("#scroolnav").hide();//隐藏导航
+      });
+
+      function fsa(i) {
+
+          $("#fs").attr("src", i);
+
+      }
+
+
+
+      setTimeout(function showimg() {
+          $(".logo>img").attr("src", "assets/images/icon/footer-logo.png");
+      }, 1);
+      showimg();
+
+
+
+
+
+</script>
+</body>
+
+</html>

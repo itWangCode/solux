@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <!-- 编码格式 -->
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- 作者 -->
+  <meta name="author" content="itWangCoder">
+  <!-- 网页描述 -->
+  <meta name="description" content="装饰家居d的公司">
+  <!-- 关键字使用","分隔 -->
+  <meta name="keywords" content="装饰,家秀,家具,家居,房子">
+  <!-- 禁止浏览器从本地机的缓存中调阅页面内容 -->
+  <meta http-equiv="Pragma" content="no-cache">
+  <!-- 用来防止别人在框架里调用你的页面 -->
+  <meta http-equiv="Window-target" content="_top">
+  <!-- content的参数有all，none，index，noindex，follow，nofollow，默认是all -->
+  <meta name="robots" content="none">
+  <!-- 收藏图标 -->
+  <link rel="Shortcut Icon" href="favicon.ico">
+  <!-- 网页不会被缓存 -->
+  <!--<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">-->
+  <!-- 解决部分兼容性问题，如果安装了GCF，则使用GCF来渲染页面，如果未安装GCF，则使用最高版本的IE内核进行渲染。 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+  <!-- 页面按原比例显示 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--这个reset.css  是初始化的样式-->
+   <link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/bootstrap_dist/css/bootstrap.min.css">
+
+
+  <!--itwangCoder.css  是响应式公共的样式，自己封装的-->
+  <link rel="stylesheet" href="assets/css/itwangCoder.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/my-keyframes.css">
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+
+
+  <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .section-wrap {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      transition: transform 1s cubic-bezier(0.86, 0, 0.03, 1);
+      -webkit-transition: -webkit-transform 1s cubic-bezier(0.86, 0, 0.03, 1);
+    }
+
+    .section-wrap .section {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .section-wrap .section .title {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      color: #fff;
+      font-size: 2.4em;
+      text-align: center;
+    }
+
+    .section-wrap .section .title img.bg-img {
+      height: 100%;
+      width: 100%;
+    }
+
+
+    .section-wrap .section .title.active .tit {
+      opacity: 1;
+      transform: translateY(-25px);
+      -webkit-transform: translateY(-25px);
+      transition: all 2s cubic-bezier(0.86, 0, 0.8, 1);
+      -webkit-transition: all 2s cubic-bezier(0.86, 0, 0.8, 1);
+    }
+
+    .put-section-0 {
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+    }
+
+    .put-section-1 {
+      transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+    }
+
+    .put-section-2 {
+      transform: translateY(-200%);
+      -webkit-transform: translateY(-200%);
+    }
+
+    .put-section-3 {
+      transform: translateY(-300%);
+      -webkit-transform: translateY(-300%);
+    }
+
+    .put-section-4 {
+      transform: translateY(-400%);
+      -webkit-transform: translateY(-400%);
+    }
+
+    .section-btn {
+      width: 14px;
+      position: fixed;
+      right: 4%;
+      top: 50%;
+    }
+
+    .section-btn li {
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+      text-indent: -9999px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      margin-bottom: 12px;
+      background: #BD362F;
+      text-align: center;
+      color: #fff;
+      onsor: pointer;
+    }
+
+    .section-btn li.on {
+      background: #fff
+    }
+
+    .arrow {
+      opacity: 1;
+      animation: arrow 3s cubic-bezier(0.5, 0, 0.1, 1) infinite;
+      -webkit-animation: arrow 3s cubic-bezier(0.5, 0, 0.1, 1) infinite;
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      margin-left: -30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+      line-height: 60px;
+      text-align: center;
+      color: #fff;
+      font-size: 50px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .arrow:hover {
+      animation-play-state: paused;
+      -webkit-animation-play-state: paused;
+    }
+
+    @keyframes arrow {
+      0%, 100% {
+        bottom: 10px;
+        opacity: 1;
+      }
+      50% {
+        bottom: 50px;
+        opacity: .5
+      }
+    }
+
+    @-webkit-keyframes arrow {
+      0%, 100% {
+        bottom: 10px;
+        opacity: 1;
+      }
+      50% {
+        bottom: 50px;
+        opacity: .5
+      }
+    }
+  </style>
+  <style>
+
+    .header {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      background-color: #000000;
+      opacity: .6;
+      position: absolute;
+      z-index: 10000;
+    }
+
+    div#footer {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+    }
+
+    form.form-inline.mt-2.mt-md-0.search-input input {
+      background: none;
+      color: white;
+    }
+
+    .section-4 {
+      position: relative;
+    }
+
+    .section-5 {
+      position: relative;
+    }
+
+    .my-footer-about {
+      position: absolute;
+      bottom: 0;
+      z-index: 12000;
+      width: 100%;
+      display: block;
+
+    }
+
+    @media screen and (max-width: 992px) {
+      div#banner-vr-logo img {
+        width: 80px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .fontSizeRem30 {
+        font-size: 12px;
+      }
+
+      .section-wrap .section .title img {
+        height: 100%;
+        width: auto;
+      }
+      .img-about,.img-about-img{
+        display: none;
+      }
+
+
+    }
+
+    @media screen and (max-width: 767px) {
+      div#navbarCollapse {
+        width: 100%;
+        background: #000;
+        z-index: 200000000;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #c1bfbf;
+      }
+      .navbar-dark .navbar-nav .nav-link {
+
+      }
+      .header {
+          opacity: .85 !important;
+        }
+
+      .dropdown-menu.show {
+        opacity: 1;
+        background-color: #fff;
+      }
+    }
+
+
+
+  </style>
+
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+
+<!--滚动屏幕显示的导航条 start-->
+<nav class="navbar navbar-expand-md navbar-dark flexBox-flex-end my-navbar  display-none" id="scrollup">
+  <div class="collapse navbar-collapse" id="navbarCollapse2">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link fontColor333 nav-link-hover-color" href="#">首页 <span class="slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">家装风格<span class="slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">服务团队<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">品质家居<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">全景展示<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">案例赏析<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">了解松霖</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0 search-input">
+      <input class="form-control mr-sm-2" type="text" placeholder="搜索需要的商品" aria-label="Search">
+      <span><img src="assets/images/icon/icon_search.png" class="img-responsive"></span>
+    </form>
+  </div>
+</nav>
+<!--滚动屏幕显示的导航条 end-->
+
+
+<!--nav start-->
+
+
+<!--banner-vr start-->
+<!--<section class="banner-vr">-->
+
+
+<style>
+  .title-1 {
+    position: relative;
+  }
+
+  .mask-article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .title-2{
+    position: relative;
+
+  }
+  .mask-article2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .mask-article5 {
+    position: absolute;
+    top: 30%;
+    left: 48%;
+    transform: translate(-30%, -48%);
+  }
+
+  .mask-article img {
+    width: 50%;
+  }
+
+  .img-about-left img{
+    width: 320px;
+    height: 400px;
+  }
+
+
+  .img-about-right .img-about-right-let img{
+    width: 680px;
+    height: 145px;
+  }
+  .img-about-right-right div:nth-child(1) img {
+    width: 375px;
+    height: 220px;
+  }
+  .img-about-right-right div:nth-child(2) img {
+    width: 285px;
+    height: 220px;
+  }
+</style>
+
+<!--</section>-->
+
+<section class="section-wrap">
+  <div class="section section-1">
+    <div class="title active title-1">
+      <img src="assets/images/img/about-bg2.png" alt="" class="img-responsive bg-img">
+      <div class="mask-article">
+        <img src="assets/images/icon/footer-logo.png" class="img-responsive m-auto logoImg " alt="" style="width: 50%">
+        <h4 class="fontSizeRem24 mt-5 mb-3 service-info-left">厦门松霖家居有限公司</h4>
+        <p class="fontSizeRem16 service-info-mid">经过多年深耕家居行业,松霖在与大量用户沟通过程中发现:由各种品牌拼凑的家无法帮助用户实现“拥有一个温馨、 愉悦美好的家”的梦想。
+          从品质卫橱的挑选、个性风格家具购置到空间软装效果实现,对于大量非专业和有心无力的用户来说,太过繁琐与漫长。而这个路程,松霖来说却是水到渠成。
+          松霖,深耕全屋设计与制造14年。融合自身研发设计、生产、营销优势资源, -个品牌即为用户提供涵盖整屋全品类家居的完整产品与服务。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="section section-2">
+    <div class="title title-2">
+      <img  src="assets/images/img/about-bg1.png" alt="" class="img-responsive bg-img">
+      <div class="mask-article2">
+        <h4 class="fontSizeRem30">优雅诠释八大设计风格</h4>
+        <div class="img-about img-about-img flexBox-center ">
+          <div class="img-about-left">
+            <img src="assets/images/img/img-ahout1.png" alt="" class="img-responsive">
+          </div>
+          <div class="img-about-right ml-3">
+            <div class="img-about-right-let mb-3">
+              <img src="assets/images/img/img-about2.png" alt="" class="img-responsive">
+            </div>
+            <div class="img-about-right-right flexBox-center">
+              <div class="mr-3"><img src="assets/images/img/img-about4.png" alt="" class="img-responsive"></div>
+              <div><img src="assets/images/img/img-about-5.png" alt="" class="img-responsive"></div>
+            </div>
+          </div>
+
+        </div>
+        <p class="fontSizeRem16 mt-3">为了满足用户对空间整体效果的需求,松霖从设计源头开始就进行整屋产品系列化风格思考。1500套国际大师经典方案,从色彩风格、搭配、纹理、
+          工艺、调性六大方面打造完整统一的全屋风格。</p>
+      </div>
+    </div>
+  </div>
+  <div class="section section-3">
+    <div class="title title-1">
+      <img src="assets/images/img/about-bg3.png" alt="" class="img-responsive bg-img">
+      <div class="mask-article">
+        <h3 class="fontSizeRem30">多位享誉业界的国际设计师带来精妙的原创设计</h3>
+        <h4 class="fontSizeRem24">-国际设计师团队</h4>
+        <div class="flexBox-center mt-3 mb-3 img-about-img">
+          <div class="col-6"><img src="assets/images/img/img-ahout1.png" alt="" class="img-responsive m-auto"></div>
+          <div class="col-6"><img src="assets/images/img/img-ahout1.png" alt="" class="img-responsive m-auto"></div>
+        </div>
+        <p class="fontSizeRem16 mt-3">
+          既非朴素寡淡,也不辻分奢隼,松霖有着精妙的頂尖没汁准則:凝萃経典,以精致細芍点睛扱筒図范,帯来恰如其分的美妙感官旅程。SOLUX松霖家
+          居的中欧没汁中心，多位享有止界盛名的跨国没汁師帯領着300多位没竍師困叺，帯来不同文化背景与領域的智慧流幼与跨界。125項徳国紅点、IF、
+          美国IDEA、日本Good Design等国内外頂級I止没i汁大突,松霖没汁精准満足用戸対“ 家“情感个性化的需求。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="section section-4">
+    <div class="title">
+      <img src="assets/images/img/about-bg4.png" alt="" class="img-responsive bg-img">
+      <div class="mask-article">
+        <h3 class="fontSizeRem30">没有中间商赚差价松霖价即工厂价</h3>
+        <div class="flexBox-center mt-3 mb-3 img-about-img">
+          <div class="col-6"><img src="assets/images/img/img-ahout1.png" alt="" class="img-responsive m-auto"></div>
+          <div class="col-6"><img src="assets/images/img/img-ahout1.png" alt="" class="img-responsive m-auto"></div>
+        </div>
+        <p class="fontSizeRem16 mt-3">以打造行业透明规范化品牌为己任,松霖反对传统商业模式中经销商、设计师等中间环节太高最终售价的方式。目前,松霖已斥资投建包括高端卫浴、橱柜、家具在内的
+          三大制造中心,占地高达13万平米。拥有高端自动化生产线、与物流自动配送等先进设备,并先后被认定为国家高新技术企业、国家级企业工业设计中心、国家级企业技
+          术中心。通过城市直营]店直接服务顾客,率先行业由一个品牌全方位、全流程把控设计、制造和服务品质。没有中间商赚差价，率先打造行业C2M模式。</p>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="section section-5">
+    <div class="title title-1">
+      <img src="assets/images/img/about-bg4.png" alt="" class="img-responsive bg-img">
+      <div class="mask-article5">
+        <h4 class="fontSizeRem24 mt-5 mb-3">厦门松霖家居有限公司</h4>
+      </div>
+    </div>
+    <!--footer start-->
+    <div id="footer"></div>
+    <!--footer end-->
+  </div>
+
+
+
+</section>
+
+
+<ul class="section-btn" style="opacity: 0">
+  <li class="on"></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<div class="arrow"><img src="assets/images/icon/about-down.png" alt=""></div>
+<!--banner-vr end-->
+
+
+<!-- 兼容低版本的IE，必须要使用1.x的版本 -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/bootstrap_dist/js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript">
+    //此处引用：鼠标滚轮mousewheel插件
+    !function (a) {
+        "function" == typeof define && define.amd ? define(["jquery"], a) : "object" == typeof exports ? module.exports = a : a(jQuery)
+    }(function (a) {
+        function b(b) {
+            var g = b || window.event, h = i.call(arguments, 1), j = 0, l = 0, m = 0, n = 0, o = 0, p = 0;
+            if (b = a.event.fix(g), b.type = "mousewheel", "detail" in g && (m = -1 * g.detail), "wheelDelta" in g && (m = g.wheelDelta), "wheelDeltaY" in g && (m = g.wheelDeltaY), "wheelDeltaX" in g && (l = -1 * g.wheelDeltaX), "axis" in g && g.axis === g.HORIZONTAL_AXIS && (l = -1 * m, m = 0), j = 0 === m ? l : m, "deltaY" in g && (m = -1 * g.deltaY, j = m), "deltaX" in g && (l = g.deltaX, 0 === m && (j = -1 * l)), 0 !== m || 0 !== l) {
+                if (1 === g.deltaMode) {
+                    var q = a.data(this, "mousewheel-line-height");
+                    j *= q, m *= q, l *= q
+                } else if (2 === g.deltaMode) {
+                    var r = a.data(this, "mousewheel-page-height");
+                    j *= r, m *= r, l *= r
+                }
+                if (n = Math.max(Math.abs(m), Math.abs(l)), (!f || f > n) && (f = n, d(g, n) && (f /= 40)), d(g, n) && (j /= 40, l /= 40, m /= 40), j = Math[j >= 1 ? "floor" : "ceil"](j / f), l = Math[l >= 1 ? "floor" : "ceil"](l / f), m = Math[m >= 1 ? "floor" : "ceil"](m / f), k.settings.normalizeOffset && this.getBoundingClientRect) {
+                    var s = this.getBoundingClientRect();
+                    o = b.clientX - s.left, p = b.clientY - s.top
+                }
+                return b.deltaX = l, b.deltaY = m, b.deltaFactor = f, b.offsetX = o, b.offsetY = p, b.deltaMode = 0, h.unshift(b, j, l, m), e && clearTimeout(e), e = setTimeout(c, 200), (a.event.dispatch || a.event.handle).apply(this, h)
+            }
+        }
+
+        function c() {
+            f = null
+        }
+
+        function d(a, b) {
+            return k.settings.adjustOldDeltas && "mousewheel" === a.type && b % 120 === 0
+        }
+
+        var e, f, g = ["wheel", "mousewheel", "DOMMouseScroll", "MozMousePixelScroll"],
+            h = "onwheel" in document || document.documentMode >= 9 ? ["wheel"] : ["mousewheel", "DomMouseScroll", "MozMousePixelScroll"],
+            i = Array.prototype.slice;
+        if (a.event.fixHooks) for (var j = g.length; j;) a.event.fixHooks[g[--j]] = a.event.mouseHooks;
+        var k = a.event.special.mousewheel = {
+            version: "3.1.12", setup: function () {
+                if (this.addEventListener) for (var c = h.length; c;) this.addEventListener(h[--c], b, !1); else this.onmousewheel = b;
+                a.data(this, "mousewheel-line-height", k.getLineHeight(this)), a.data(this, "mousewheel-page-height", k.getPageHeight(this))
+            }, teardown: function () {
+                if (this.removeEventListener) for (var c = h.length; c;) this.removeEventListener(h[--c], b, !1); else this.onmousewheel = null;
+                a.removeData(this, "mousewheel-line-height"), a.removeData(this, "mousewheel-page-height")
+            }, getLineHeight: function (b) {
+                var c = a(b), d = c["offsetParent" in a.fn ? "offsetParent" : "parent"]();
+                return d.length || (d = a("body")), parseInt(d.css("fontSize"), 10) || parseInt(c.css("fontSize"), 10) || 16
+            }, getPageHeight: function (b) {
+                return a(b).height()
+            }, settings: {adjustOldDeltas: !0, normalizeOffset: !0}
+        };
+        a.fn.extend({
+            mousewheel: function (a) {
+                return a ? this.bind("mousewheel", a) : this.trigger("mousewheel")
+            }, unmousewheel: function (a) {
+                return this.unbind("mousewheel", a)
+            }
+        })
+    });
+
+    $(function () {
+        var i = 0;
+        var $btn = $('.section-btn li'),
+            $wrap = $('.section-wrap'),
+            $arrow = $('.arrow');
+
+        /*当前页面赋值*/
+        function up() {
+            i++;
+            if (i == $btn.length) {
+                i = 0;
+                // $(".arrow").hide();
+                // $(".my-footer-about").show();
+            }
+        }
+
+        function down() {
+            i--;
+            if (i < 0) {
+                i = $btn.length - 1
+            }
+        }
+
+        /*页面滑动*/
+        function run() {
+            $btn.eq(i).addClass('on').siblings().removeClass('on');
+            $wrap.attr("class", "section-wrap").addClass(function () {
+                return "put-section-" + i;
+            }).find('.section').eq(i).find('.title').addClass('active');
+        }
+
+        /*右侧按钮点击*/
+        // $btn.each(function (index) {
+        //     $(this).click(function () {
+        //         i = index;
+        //         run();
+        //     })
+        // });
+
+        /*翻页按钮点击*/
+        $arrow.one('click', go);
+
+        function go() {
+            up();
+            run();
+            setTimeout(function () {
+                $arrow.one('click', go)
+            }, 1000)
+        }
+
+        /*响应鼠标*/
+        $wrap.one('mousewheel', mouse_);
+
+        function mouse_(event) {
+            if (event.deltaY < 0) {
+                up()
+            } else {
+                down()
+            }
+            run();
+            setTimeout(function () {
+                $wrap.one('mousewheel', mouse_)
+            }, 1000)
+        }
+
+        /*响应键盘上下键*/
+        $(document).one('keydown', k);
+
+        function k(event) {
+            var e = event || window.event;
+            var key = e.keyCode || e.which || e.charCode;
+            switch (key) {
+                case 38:
+                    down();
+                    run();
+                    break;
+                case 40:
+                    up();
+                    run();
+                    break;
+            }
+            setTimeout(function () {
+                $(document).one('keydown', k)
+            }, 1000);
+        }
+    });
+</script>
+<script>
+    setTimeout(function showimg2() {
+        $(".logo>img").attr("src", "assets/images/icon/footer-logo.png");
+    }, 50);
+    showimg2();
+</script>
+</body>
+
+</html>

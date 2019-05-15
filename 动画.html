@@ -1,0 +1,231 @@
+<!--
+    Created by wangyang on 2019-05-10.
+    itwangyang@gmail.com
+    http://www.itwangyang.xyz
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>Title</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="stylesheet" href="assets/css/animate.css">
+
+</head>
+<body>
+
+<div style="display: flex;">
+  <div class="wow slideInLeft">
+    <div style="width: 500px; height: 400px;background-color: #000;"></div>
+  </div>
+  <div class="wow slideInRight">
+    <div style="width: 500px; height: 400px;background-color: #ff5268;"></div>
+  </div>
+</div>
+
+
+<script src="assets/js/wow.min.js"></script>
+<script>
+    // new WOW().init();
+
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        offset: 0,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>wow案例</title>
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/bootstrap_dist/css/bootstrap.min.css" />
+  &lt;!&ndash;<link rel="stylesheet" href="static/font-awesome/4.3.0/css/font-awesome.min.css" />&ndash;&gt;
+  <style type="text/css">
+    .icon-circle {
+      width: 80px;
+      height: 80px;
+      border: 6px solid #54CC8F;
+      border-radius: 80px;
+    }
+    /*实战css start*/
+    .section-header .section-title {
+      font-size: 44px;
+      color: #272727;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 20px;
+      margin: 0 0 20px;
+    }
+    .section-header .section-title:before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      bottom: 0;
+      left: 50%;
+      margin-left: -120px;
+      height: 1px;
+      background: #ebebeb;
+    }
+    .section-header .section-title:after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      bottom: -11px;
+      left: 50%;
+      margin-left: -12px;
+      border: 5px solid #fff;
+      border-radius: 20px;
+      background: #45aed6;
+    }
+    .media.service-box .pull-left > i {
+      font-size: 24px;
+      height: 64px;
+      line-height: 64px;
+      text-align: center;
+      width: 64px;
+      border-radius: 100%;
+      color: #45aed6;
+      -webkit-box-shadow: inset 0 0 0 1px #d7d7d7;
+      position: relative;
+    }
+    .media.service-box .pull-left > i:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      margin-top: 7px;
+      right: -5px;
+      border: 4px solid #fff;
+      border-radius: 20px;
+      background: #45aed6;
+    }
+    /*实战css end*/
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <h2 class="text-center wow fadeInDown">ITDragon博客</h2>
+  <p  class="text-center wow fadeInDown"><a href="http://blog.csdn.net/qq_19558705">欢迎访问我的博客：http://blog.csdn.net/qq_19558705</a></p>
+
+  <div class="row text-center">
+    <div class="col-md-2 col-md-4 col-xs-6">
+      <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+        <div class="icon-circle">
+          <span>1</span>
+          <h4><a href="http://blog.csdn.net/qq_19558705/article/details/49851879">干</a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-md-4 col-xs-6">
+      <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+        <div class="icon-circle">
+          <span>2</span>
+          <h4><a href="http://blog.csdn.net/qq_19558705/article/details/49947317">货</a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-md-4 col-xs-6">
+      <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+        <div class="icon-circle">
+          <span>3</span>
+          <h4><a href="http://blog.csdn.net/qq_19558705/article/details/50108037">等</a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-md-4 col-xs-6">
+      <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="300ms">
+        <div class="icon-circle">
+          <span>4</span>
+          <h4><a href="http://blog.csdn.net/qq_19558705/article/details/50108171">你</a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-md-4 col-xs-6">
+      <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="400ms">
+        <div class="icon-circle">
+          <span>5</span>
+          <h4><a href="http://blog.csdn.net/qq_19558705/article/details/50127611">来</a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-md-4 col-xs-6">
+      <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="500ms">
+        <div class="icon-circle">
+          <span>6</span>
+          <h4><a href="http://blog.csdn.net/qq_19558705/article/details/50318981">拿</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+&lt;!&ndash; 实战 start &ndash;&gt;
+<div class="container">
+  <div class="section-header">
+    <h2 class="section-title text-center wow fadeInDown">WOW</h2>
+    <p class="text-center wow fadeInDown">实战效果</p>
+  </div>
+  <div class="row">
+    <div class="col-sm-3 col-md-3 media service-box wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+      <div class="pull-left">
+        <i class="fa fa-user-md"></i>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">I</h4>
+        <p>详细内容</p>
+      </div>
+    </div>
+    <div class="col-sm-3 col-md-3 media service-box wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+      <div class="pull-left">
+        <i class="fa fa-heart"></i>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">LOVE</h4>
+        <p>详细内容</p>
+      </div>
+    </div>
+    <div class="col-sm-3 col-md-3 media service-box wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+      <div class="pull-left">
+        <i class="fa fa-users"></i>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">YOURS</h4>
+        <p>详细内容</p>
+      </div>
+    </div>
+    <div class="col-sm-3 col-md-3 media service-box wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+      <div class="pull-left">
+        <i class="fa fa-life-ring fa-spin"></i>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">^0^</h4>
+        <p>详细内容</p>
+      </div>
+    </div>
+  </div>
+</div>
+&lt;!&ndash; 实战 end &ndash;&gt;
+<script type="text/javascript" src="assets/js/wow.min.js"></script>
+<script type="text/javascript">
+    new WOW().init();
+</script>
+</body>
+
+</html>-->

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <!-- 编码格式 -->
+  <meta charset="UTF-8">
+  <title></title>
+  <!-- 作者 -->
+  <meta name="author" content="itWangCoder">
+  <!-- 网页描述 -->
+  <meta name="description" content="装饰家居d的公司">
+  <!-- 关键字使用","分隔 -->
+  <meta name="keywords" content="装饰,家秀,家具,家居,房子">
+  <!-- 禁止浏览器从本地机的缓存中调阅页面内容 -->
+  <meta http-equiv="Pragma" content="no-cache">
+  <!-- 用来防止别人在框架里调用你的页面 -->
+  <meta http-equiv="Window-target" content="_top">
+  <!-- content的参数有all，none，index，noindex，follow，nofollow，默认是all -->
+  <meta name="robots" content="none">
+  <!-- 收藏图标 -->
+  <link rel="Shortcut Icon" href="favicon.ico">
+  <!-- 网页不会被缓存 -->
+  <!--<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">-->
+  <!-- 解决部分兼容性问题，如果安装了GCF，则使用GCF来渲染页面，如果未安装GCF，则使用最高版本的IE内核进行渲染。 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+  <!-- 页面按原比例显示 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--这个reset.css  是初始化的样式-->
+    <link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/animate.css"><link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/bootstrap_dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+
+  <!--itwangCoder.css  是响应式公共的样式，自己封装的-->
+  <link rel="stylesheet" href="assets/css/itwangCoder.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/my-keyframes.css">
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+
+  <style>
+
+   /* @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .carousel-control-prev-icon {
+        background: #333 url('assets/images/icon/banner-left.png') no-repeat !important;
+        width: 40px !important;
+        height: 120px !important;
+        !* background: #000; *!
+        background-position: center;
+      }
+
+      .carousel-control-next-icon {
+        background: #333 url('assets/images/icon/banner-left.png') no-repeat !important;
+        width: 40px !important;
+        height: 120px !important;
+        !* background: #000; *!
+        background-position: center;
+      }
+    }*/
+
+    @media screen and (max-width: 992px){
+      div#banner-vr-logo img {
+        width: 80px;
+        height: auto;
+        margin: 0 auto;
+      }
+      .fontSizeRem30 {
+        font-size: 12px;
+      }
+      .float-item{
+        display: none;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<!--滚动屏幕显示的导航条 start-->
+<nav class="navbar navbar-expand-md navbar-dark flexBox-flex-end my-navbar  display-none" id="scrollup">
+  <div class="collapse navbar-collapse" id="navbarCollapse2">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link fontColor333 nav-link-hover-color" href="#">首页 <span class="slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">家装风格<span class="slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">服务团队<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">品质家居<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">全景展示<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">案例赏析<span class=" slash mr-2 ml-4">/</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link fontColor333" href="#">了解松霖</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0 search-input">
+      <input class="form-control mr-sm-2" type="text" placeholder="搜索需要的商品" aria-label="Search">
+      <span><img src="assets/images/icon/icon_search.png" class="img-responsive"></span>
+    </form>
+  </div>
+</nav>
+<!--滚动屏幕显示的导航条 end-->
+
+
+<!--nav start-->
+
+
+<!--banner-vr start-->
+<section class="banner-vr">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- 指示符 -->
+    <ul class="carousel-indicators">
+      <!--<li data-target="#demo" data-slide-to="0" class="active"></li>-->
+      <!--<li data-target="#demo" data-slide-to="1"></li>-->
+      <!--<li data-target="#demo" data-slide-to="2"></li>-->
+      <!--<li data-target="#demo" data-slide-to="3"></li>-->
+    </ul>
+
+    <!-- 轮播图片 -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/img/banner1.png" class="img-responsive">
+        <div class="carousel-caption">
+          <div class="row bg-dark banner-title">
+            <div class="col-6  flexBox-center flex-column service-info-left">
+              <h3 class="fontSizeRem24">集美万科广场490平米</h3>
+              <p class="fontSizeRem18"> 现代前卫风格 设计师李月</p>
+              <button class="btn my-btn-primary fontSizeRem18 quanjingBtn" >案例全景</button>
+</div>
+            <div class="col-6  text-left service-info-right" >
+              <h4 class="fontSizeRem20">设计理念</h4>
+              <p class="fontSizeRem18"> 项目名称:铂悦西郊</p>
+              <p class="fontSizeRem18"> 项目面积: 490平</p>
+              <p class="fontSizeRem18"> 本案中花园下挖的设计,使整个房子变的非常通透,同时满足了业主对房间的需
+                求,圆润的家具设计,使房间充满了舒适感和安全感。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/img/banner2.png" class="img-responsive">
+        <div class="carousel-caption">
+          <div class="row bg-dark banner-title">
+            <div class="col-6  flexBox-center flex-column service-info-left">
+              <h3 class="fontSizeRem24">集美万科广场490平米</h3>
+              <p class="fontSizeRem18"> 现代前卫风格 设计师李月</p>
+              <button class="btn my-btn-primary fontSizeRem18 quanjingBtn" >案例全景</button>
+</div>
+            <div class="col-6  text-left service-info-right">
+              <h4 class="fontSizeRem20">设计理念</h4>
+              <p class="fontSizeRem18"> 项目名称:铂悦西郊</p>
+              <p class="fontSizeRem18"> 项目面积: 490平</p>
+              <p class="fontSizeRem18"> 本案中花园下挖的设计,使整个房子变的非常通透,同时满足了业主对房间的需
+                求,圆润的家具设计,使房间充满了舒适感和安全感。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/img/banner3.png" class="img-responsive">
+        <div class="carousel-caption">
+          <div class="row bg-dark banner-title">
+            <div class="col-6  flexBox-center flex-column service-info-left">
+              <h3 class="fontSizeRem24">集美万科广场490平米</h3>
+              <p class="fontSizeRem18"> 现代前卫风格 设计师李月</p>
+              <button class="btn my-btn-primary fontSizeRem18 quanjingBtn" >案例全景</button>
+</div>
+            <div class="col-6  text-left service-info-right">
+              <h4 class="fontSizeRem20">设计理念</h4>
+              <p class="fontSizeRem18"> 项目名称:铂悦西郊</p>
+              <p class="fontSizeRem18"> 项目面积: 490平</p>
+              <p class="fontSizeRem18"> 本案中花园下挖的设计,使整个房子变的非常通透,同时满足了业主对房间的需
+                求,圆润的家具设计,使房间充满了舒适感和安全感。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/img/banner4.png" class="img-responsive">
+        <div class="carousel-caption ">
+          <div class="row bg-dark banner-title">
+            <div class="col-6  flexBox-center flex-column service-info-left">
+              <h3 class="fontSizeRem24">集美万科广场490平米</h3>
+              <p class="fontSizeRem18"> 现代前卫风格 设计师李月</p>
+              <button class="btn my-btn-primary fontSizeRem18 quanjingBtn" >案例全景</button>
+</div>
+            <div class="col-6  text-left service-info-right">
+              <h4 class="fontSizeRem20">设计理念</h4>
+              <p class="fontSizeRem18"> 项目名称:铂悦西郊</p>
+              <p class="fontSizeRem18"> 项目面积: 490平</p>
+              <p class="fontSizeRem18"> 本案中花园下挖的设计,使整个房子变的非常通透,同时满足了业主对房间的需
+                求,圆润的家具设计,使房间充满了舒适感和安全感。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 左右切换按钮 -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
+  </div>
+
+</section>
+<!--banner-vr end-->
+
+
+
+
+<!--设计师免费为你设计-->
+<section class="container form-my pt-lg-5 mt-lg-5 mt-md-3 mt-sm-2 mt-3">
+  <div class="row form-my-title flex-column mb-lg-5 mb-3  offset-lg-2">
+    <h4 class="fontSizeRem24">设计师免费为你设计</h4>
+    <p class="fontSizeRem18 ml-lg-5 ">更懂产品室内设计，就是松霖设计</p>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 offset-lg-2 col-md-6 col-sm-12 col-12 ">
+      <img src="assets/images/img/chair_img.png" class="img-responsive my-mb-show-chaiir">
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+      <form>
+        <div class="form-group mb-4">
+          <input type="text" class="form-control border" id="name" placeholder="如何称呼您?">
+        </div>
+        <div class="form-group mb-4">
+          <input type="tel" class="form-control border" id="tel" placeholder="您的手机号码是？">
+        </div>
+        <div class="form-group mb-4">
+          <div class="row">
+            <div class="col-lg-8 col-md-6 col-sm-6 col-6" style="padding: 0 0 0 15px;">
+              <input type="text" class="form-control border" placeholder="请您输入验证码">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-6 m-0 p-0">
+              <button type="submit" class="btn my-btn-primary fontColorFFF" style="width: 90%">获取验证码</button>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn my-btn-primary fontColorFFF" style="width: 100%">立即预约</button>
+
+      </form>
+    </div>
+  </div>
+</section>
+<!--设计师免费为你设计-->
+
+
+
+<!--footer start-->
+<div id="footer"></div>
+<!--footer end-->
+
+<!--float  start-->
+<div id="float"></div>
+<!--float end-->
+
+<!-- 兼容低版本的IE，必须要使用1.x的版本 -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/imageflow.js"></script>
+<script src="assets/bootstrap_dist/js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".tab-designer li").click(function () {
+            $(".tab-designer li").eq($(this).index()).addClass("cur1").siblings().removeClass('cur1');
+            $(".tab-wang").hide().eq($(this).index()).show();
+            //另一种方法: $("div").eq($(".tab li").index(this)).addClass("on").siblings().removeClass('on');
+        });
+
+        $(".tab-two li ").click(function () {
+            $(".tab-two li ").eq($(this).index()).addClass("cur-two").siblings().removeClass('cur-two');
+            $(".tab-wang-two").hide().eq($(this).index()).show();
+            $(".tab-wang").hide()
+            //另一种方法: $("div").eq($(".tab li").index(this)).addClass("on").siblings().removeClass('on');
+        });
+    });
+    
+    $(".my-btn-primary").click(function () {
+        alert("1")
+    })
+</script>
+</body>
+
+</html>
